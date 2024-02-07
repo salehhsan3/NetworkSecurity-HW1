@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<?xml-stylesheet href="file:///D:/Nmap/nmap.xsl" type="text/xsl"?><nmaprun args="nmap -sS -p - -T4 -A scanme.nmap.org" profile_name="" scanner="nmap" start="1707320179" startstr="Wed Feb  7 17:36:19 2024" version="7.94" xmloutputversion="1.04"><scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"></scaninfo><verbose level="0"></verbose><debugging level="0"></debugging><output type="interactive">Starting Nmap 7.94 ( https://nmap.org ) at 2024-02-07 17:36 Jerusalem Standard Time
+Nmap scan report for scanme.nmap.org (45.33.32.156)
+Host is up (0.22s latency).
+Other addresses for scanme.nmap.org (not scanned): 2600:3c01::f03c:91ff:fe18:bb2f
+Not shown: 65531 closed tcp ports (reset)
+PORT      STATE SERVICE    VERSION
+22/tcp    open  ssh        OpenSSH 6.6.1p1 Ubuntu 2ubuntu2.13 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   1024 ac:00:a0:1a:82:ff:cc:55:99:dc:67:2b:34:97:6b:75 (DSA)
+|   2048 20:3d:2d:44:62:2a:b0:5a:9d:b5:b3:05:14:c2:a6:b2 (RSA)
+|   256 96:02:bb:5e:57:54:1c:4e:45:2f:56:4c:4a:24:b2:57 (ECDSA)
+|_  256 33:fa:91:0f:e0:e1:7b:1f:6d:05:a2:b0:f1:54:41:56 (ED25519)
+80/tcp    open  http       Apache httpd 2.4.7 ((Ubuntu))
+|_http-favicon: Nmap Project
+|_http-title: Go ahead and ScanMe!
+|_http-server-header: Apache/2.4.7 (Ubuntu)
+9929/tcp  open  nping-echo Nping echo
+31337/tcp open  tcpwrapped
+Aggressive OS guesses: Linux 5.0 - 5.4 (96%), Linux 4.15 - 5.8 (94%), Linux 2.6.32 - 3.13 (93%), Linux 5.0 - 5.5 (92%), Linux 2.6.22 - 2.6.36 (92%), Linux 3.10 - 4.11 (92%), Linux 5.1 (92%), Linux 2.6.32 (91%), Linux 3.2 - 4.9 (91%), Linux 5.0 (91%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 22 hops
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 80/tcp)
+HOP RTT       ADDRESS
+1   1.00 ms   192.168.1.1
+2   ... 5
+6   62.00 ms  hotnet-213-57-1-57.hotnet.net.il (213.57.1.57)
+7   63.00 ms  ffm-b5-link.ip.twelve99.net (213.248.69.137)
+8   69.00 ms  ffm-bb1-link.ip.twelve99.net (62.115.136.212)
+9   73.00 ms  prs-bb2-link.ip.twelve99.net (62.115.122.138)
+10  145.00 ms rest-bb1-link.ip.twelve99.net (62.115.122.159)
+11  156.00 ms ash-b2-link.ip.twelve99.net (62.115.123.125)
+12  151.00 ms akamai-ic-352275.ip.twelve99-cust.net (62.115.184.199)
+13  146.00 ms ae11.r22.iad02.mag.netarch.akamai.com (23.209.170.118)
+14  150.00 ms ae21.r02.iad02.icn.netarch.akamai.com (23.209.165.101)
+15  168.00 ms ae27.r02.ord01.icn.netarch.akamai.com (23.193.112.228)
+16  209.00 ms ae4.r02.sjc01.icn.netarch.akamai.com (23.32.63.27)
+17  219.00 ms ae2.r12.sjc01.ien.netarch.akamai.com (23.207.232.41)
+18  239.00 ms a23-203-158-53.deploy.static.akamaitechnologies.com (23.203.158.53)
+19  ...
+20  208.00 ms 10.203.35.71
+21  214.00 ms 10.203.7.43
+22  206.00 ms scanme.nmap.org (45.33.32.156)
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 230.23 seconds
+</output><host comment=""><status state="up"></status><address addr="45.33.32.156" vendor="" addrtype="ipv4"></address><hostnames><hostname name="scanme.nmap.org" type="user"></hostname><hostname name="scanme.nmap.org" type="PTR"></hostname></hostnames><ports><extraports count="65531" state="closed"></extraports><port portid="22" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="47"></state><service conf="10" method="probed" name="ssh" product="OpenSSH" version="6.6.1p1 Ubuntu 2ubuntu2.13" extrainfo="Ubuntu Linux; protocol 2.0"></service></port><port portid="80" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="50"></state><service conf="10" method="probed" name="http" product="Apache httpd" version="2.4.7" extrainfo="(Ubuntu)"></service></port><port portid="9929" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="50"></state><service conf="10" method="probed" name="nping-echo" product="Nping echo"></service></port><port portid="31337" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="47"></state><service conf="8" method="probed" name="tcpwrapped"></service></port></ports><os><portused state="open" proto="tcp" portid="22"></portused><portused state="closed" proto="tcp" portid="1"></portused><portused state="closed" proto="udp" portid="42514"></portused><osmatch name="Linux 5.0 - 5.4" accuracy="96" line="68121"><osclass vendor="Linux" osfamily="Linux" type="general purpose" osgen="5.X" accuracy="96"></osclass></osmatch><osmatch name="Linux 4.15 - 5.8" accuracy="94" line="67250"><osclass vendor="Linux" osfamily="Linux" type="general purpose" osgen="5.X" accuracy="94"></osclass></osmatch><osmatch name="Linux 2.6.32 - 3.13" accuracy="93" line="56610"><osclass vendor="Linux" osfamily="Linux" type="general purpose" osgen="3.X" accuracy="93"></osclass></osmatch><osmatch name="Linux 5.0 - 5.5" accuracy="92" line="68098"><osclass vendor="Linux" osfamily="Linux" type="general purpose" osgen="5.X" accuracy="92"></osclass></osmatch><osmatch name="Linux 2.6.22 - 2.6.36" accuracy="92" line="51885"><osclass vendor="Linux" osfamily="Linux" type="general purpose" osgen="2.6.X" accuracy="92"></osclass></osmatch><osmatch name="Linux 3.10 - 4.11" accuracy="92" line="63448"><osclass vendor="Linux" osfamily="Linux" type="general purpose" osgen="4.X" accuracy="92"></osclass></osmatch><osmatch name="Linux 5.1" accuracy="92" line="68139"><osclass vendor="Linux" osfamily="Linux" type="general purpose" osgen="5.X" accuracy="92"></osclass></osmatch><osmatch name="Linux 2.6.32" accuracy="91" line="55372"><osclass vendor="Linux" osfamily="Linux" type="general purpose" osgen="2.6.X" accuracy="91"></osclass></osmatch><osmatch name="Linux 3.2 - 4.9" accuracy="91" line="65323"><osclass vendor="Linux" osfamily="Linux" type="general purpose" osgen="4.X" accuracy="91"></osclass></osmatch><osmatch name="Linux 5.0" accuracy="91" line="68054"><osclass vendor="Linux" osfamily="Linux" type="general purpose" osgen="5.X" accuracy="91"></osclass></osmatch></os><uptime seconds="386194" lastboot="Sat Feb  3 06:23:35 2024"></uptime><tcpsequence index="257" difficulty="Good luck!" values="5CF32D76,19BFC52F,3A0131E5,395ACF4A,7462B675,7BC350E3"></tcpsequence><ipidsequence class="All zeros" values="0,0,0,0,0,0"></ipidsequence><tcptssequence class="1000HZ" values="1704A0DD,1704A1B2,1704A1B2,1704A287,1704A287,1704A35D"></tcptssequence><trace proto="tcp" port="80"><hop ttl="1" rtt="1.00" ipaddr="192.168.1.1" host=""></hop><hop ttl="6" rtt="62.00" ipaddr="213.57.1.57" host="hotnet-213-57-1-57.hotnet.net.il"></hop><hop ttl="7" rtt="63.00" ipaddr="213.248.69.137" host="ffm-b5-link.ip.twelve99.net"></hop><hop ttl="8" rtt="69.00" ipaddr="62.115.136.212" host="ffm-bb1-link.ip.twelve99.net"></hop><hop ttl="9" rtt="73.00" ipaddr="62.115.122.138" host="prs-bb2-link.ip.twelve99.net"></hop><hop ttl="10" rtt="145.00" ipaddr="62.115.122.159" host="rest-bb1-link.ip.twelve99.net"></hop><hop ttl="11" rtt="156.00" ipaddr="62.115.123.125" host="ash-b2-link.ip.twelve99.net"></hop><hop ttl="12" rtt="151.00" ipaddr="62.115.184.199" host="akamai-ic-352275.ip.twelve99-cust.net"></hop><hop ttl="13" rtt="146.00" ipaddr="23.209.170.118" host="ae11.r22.iad02.mag.netarch.akamai.com"></hop><hop ttl="14" rtt="150.00" ipaddr="23.209.165.101" host="ae21.r02.iad02.icn.netarch.akamai.com"></hop><hop ttl="15" rtt="168.00" ipaddr="23.193.112.228" host="ae27.r02.ord01.icn.netarch.akamai.com"></hop><hop ttl="16" rtt="209.00" ipaddr="23.32.63.27" host="ae4.r02.sjc01.icn.netarch.akamai.com"></hop><hop ttl="17" rtt="219.00" ipaddr="23.207.232.41" host="ae2.r12.sjc01.ien.netarch.akamai.com"></hop><hop ttl="18" rtt="239.00" ipaddr="23.203.158.53" host="a23-203-158-53.deploy.static.akamaitechnologies.com"></hop><hop ttl="20" rtt="208.00" ipaddr="10.203.35.71" host=""></hop><hop ttl="21" rtt="214.00" ipaddr="10.203.7.43" host=""></hop><hop ttl="22" rtt="206.00" ipaddr="45.33.32.156" host="scanme.nmap.org"></hop></trace></host><runstats><finished time="1707320409" timestr="Wed Feb  7 17:40:09 2024"></finished><hosts up="1" down="0" total="1"></hosts></runstats></nmaprun>

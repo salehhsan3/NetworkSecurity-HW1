@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<?xml-stylesheet href="file:///D:/Nmap/nmap.xsl" type="text/xsl"?><nmaprun args="nmap -sS -sV -p - -T4 scanme.nmap.org" profile_name="" scanner="nmap" start="1707319171" startstr="Wed Feb  7 17:19:31 2024" version="7.94" xmloutputversion="1.04"><scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"></scaninfo><verbose level="0"></verbose><debugging level="0"></debugging><output type="interactive">Starting Nmap 7.94 ( https://nmap.org ) at 2024-02-07 17:19 Jerusalem Standard Time
+Nmap scan report for scanme.nmap.org (45.33.32.156)
+Host is up (0.22s latency).
+Other addresses for scanme.nmap.org (not scanned): 2600:3c01::f03c:91ff:fe18:bb2f
+Not shown: 65531 closed tcp ports (reset)
+PORT      STATE SERVICE    VERSION
+22/tcp    open  ssh        OpenSSH 6.6.1p1 Ubuntu 2ubuntu2.13 (Ubuntu Linux; protocol 2.0)
+80/tcp    open  http       Apache httpd 2.4.7 ((Ubuntu))
+9929/tcp  open  nping-echo Nping echo
+31337/tcp open  tcpwrapped
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 135.43 seconds
+</output><host comment=""><status state="up"></status><address addr="45.33.32.156" vendor="" addrtype="ipv4"></address><hostnames><hostname name="scanme.nmap.org" type="user"></hostname><hostname name="scanme.nmap.org" type="PTR"></hostname></hostnames><ports><extraports count="65531" state="closed"></extraports><port portid="22" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="50"></state><service conf="10" method="probed" name="ssh" product="OpenSSH" version="6.6.1p1 Ubuntu 2ubuntu2.13" extrainfo="Ubuntu Linux; protocol 2.0"></service></port><port portid="80" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="47"></state><service conf="10" method="probed" name="http" product="Apache httpd" version="2.4.7" extrainfo="(Ubuntu)"></service></port><port portid="9929" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="47"></state><service conf="10" method="probed" name="nping-echo" product="Nping echo"></service></port><port portid="31337" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="50"></state><service conf="8" method="probed" name="tcpwrapped"></service></port></ports><os></os><uptime seconds="" lastboot=""></uptime><tcpsequence index="" difficulty="" values=""></tcpsequence><ipidsequence class="" values=""></ipidsequence><tcptssequence class="" values=""></tcptssequence></host><runstats><finished time="1707319307" timestr="Wed Feb  7 17:21:47 2024"></finished><hosts up="1" down="0" total="1"></hosts></runstats></nmaprun>
